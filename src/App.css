@@ -1,10 +1,58 @@
 
 
-
-.App {
+.App.light {
   display: flex;
+
   flex-direction: column;
   background-color: purple;
+  color: white;
+  text-align: center;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+
+
+/* .contact{
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.gifContainer{
+  margin-left: 20%;
+}
+
+.contactInfo{
+  margin-right: 30%;
+} */
+
+.weather-image{
+  margin-left: 10%;
+}
+ 
+.weather-content{
+  margin-left: 10%;
+  font-size: 30px;
+  margin-right: 10%;
+}
+.weather-app{
+  margin-top: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.App {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.App.dark {
+  display: flex;
+  flex-direction: column;
+  background-color: black;
   color: white;
   text-align: center;
   height: 100%;
@@ -21,7 +69,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
+
+.about{
+  font-size: 30px;
+  font-family: 'Courier New', Courier, monospace;
+  margin-top: 100px;
+}
+
 
 .nav-link {
   text-decoration: none;
@@ -33,6 +89,7 @@
   box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
   margin-bottom: 20px;
   border-radius: 15px;
+  margin-top: 30px;
   
 }
 h1{
@@ -72,3 +129,64 @@ h2{
   margin-top: auto;
   max-height: 150px;
 }
+
+
+/* 
+ 
+ai styling 
+
+*/
+.about {
+  color: white;
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.about h2{
+  color: white;
+  text-shadow: 5px 5px 5px black;
+}
+
+.timeline {
+  margin-top: 30px;
+}
+
+.timeline-item {
+  padding: 20px;
+  border-left: 2px solid #ddd;
+  border-right: 2px solid #ddd;
+  border-top: 2px solid #ddd;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 5px 5px 5px black;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+
+.timeline-item h3 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.timeline-item h4 {
+  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.timeline-item p {
+  margin: 5px 0;
+  font-size: 14px;
+}
+
+.about h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/*
+  ai styling
+*/
