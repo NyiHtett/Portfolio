@@ -1,15 +1,16 @@
 import './App.css';
 import './Logo.png';
 
-import * as Three from 'three';
 import gifImage from './among-us.gif';
 import Rate from './Rate.js';
 import About from './About.js';
+import * as Three from 'three';
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 function App() {
   const [theme, setTheme] = useState('light');
+  const [currentTime, setCurrentTime] = useState(new Date());
 
   function toggleTheme() {
     setTheme(prevTheme => ( prevTheme === 'light' ? 'dark' : 'light'));
@@ -82,9 +83,28 @@ function App() {
   }
 
   function Contact(){
+    const [currentTime, setCurrentTime] = useState(new Date());
+
+    useEffect(()=>{
+      const timer = setInterval(()=>{
+        setCurrentTime(new Date());
+      },1000)
+
+      return () => {
+        clearInterval(timer);
+      }
+
+    }, []);
+
+    
+
     return (
       <div className = "contact"> 
       <div className = "gifContainer">
+        <div className = "time">
+           Current time: {currentTime.toLocaleTimeString()}
+        </div>
+        <br/>
       <img width="200" src={gifImage} alt="Example GIF" />
       </div>
       <div className = "contactInfo"> 
