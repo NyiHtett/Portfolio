@@ -190,3 +190,9 @@ ai styling
 /*
   ai styling
 */
+
+
+
+.slide-in{
+  animation: slideIn 1s ease; 
+}

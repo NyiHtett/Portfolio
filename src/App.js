@@ -1,6 +1,7 @@
 import './App.css';
 import './Logo.png';
 
+
 import gifImage from './among-us.gif';
 import Rate from './Rate.js';
 import About from './About.js';
@@ -11,13 +12,21 @@ import React, { useEffect, useState } from 'react';
 function App() {
   const [theme, setTheme] = useState('light');
   const [currentTime, setCurrentTime] = useState(new Date());
+  const [isNavAnimated, setIsNavAnimated] = useState(false);
+
+  function handleNavigation() {
+    setIsNavAnimated(true); 
+    setTimeout(() => {
+      setIsNavAnimated(false);
+    }, 500);
+  }
 
   function toggleTheme() {
     setTheme(prevTheme => ( prevTheme === 'light' ? 'dark' : 'light'));
   }
   function Home(){
     return (
-      <div>
+      <div className = {`${isNavAnimated ? 'slide-in' : ''}`}>
         <div className = "image-container">
        <img src={require('./port.jpg')} className = "profile-image" width = "200" />
        </div>
@@ -125,7 +134,7 @@ function App() {
           <div >
           <ul className = "horizontal-list">
             <li>
-              <Link to="/" className="nav-link"> Home </Link>
+              <Link to="/" className="nav-link" onClick={handleNavigation}> Home </Link>
             </li>
             <li>
               <Link to="/projects" className="nav-link"> Projects </Link>
