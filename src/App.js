@@ -13,12 +13,25 @@ function App() {
   const [theme, setTheme] = useState('light');
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isNavAnimated, setIsNavAnimated] = useState(false);
+  const [isChangeImage,setChangeImage] = useState(false);
 
   function handleNavigation() {
     setIsNavAnimated(true); 
     setTimeout(() => {
       setIsNavAnimated(false);
     }, 500);
+  }
+
+  function changeImage() {
+    if(isChangeImage == true)
+    {
+      setChangeImage(false);
+    }
+    else
+    {
+      setChangeImage(true);
+    }
+    
   }
 
   function toggleTheme() {
@@ -34,8 +47,7 @@ function App() {
        <p class = "first-paragraph">
         "Aspiring software engineering"
        </p>
-
-       
+       <p> Coming right up</p> 
       </div>
     );
   }
@@ -146,8 +158,16 @@ function App() {
               <Link to="/contact" className="nav-link" onClick={handleNavigation}> Contact </Link>
             </li>
             <li>
-            <button onClick={toggleTheme}>
-         <img src={require('./light.png')} width = "50" height = "50" />
+            <button 
+            onClick={() =>{
+              toggleTheme();
+              handleNavigation();
+              changeImage();
+            }}
+            >
+{/* ./light.png */}
+        
+         <img src={require(`./${isChangeImage ? 'moon' : 'light'}.png`)} width = "50" height = "50" />
        </button>
             </li>
           </ul>
