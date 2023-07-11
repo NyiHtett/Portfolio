@@ -26,7 +26,7 @@ function App() {
   }
   function Home(){
     return (
-      <div className = {`${isNavAnimated ? 'slide-in' : ''}`}>
+      <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
         <div className = "image-container">
        <img src={require('./port.jpg')} className = "profile-image" width = "200" />
        </div>
@@ -42,7 +42,7 @@ function App() {
 
   function Projects(){
     return (
-      <div>
+      <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
         <div className = "weather-app">
         <a href='https://my-mapify.vercel.app/'>
           <img  className = "weather-image" width = "300" src={require('./weatherapp.png')} />
@@ -59,7 +59,7 @@ function App() {
 
   function About(){
     return (
-      <div>
+      <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
         <div className="about">
       <h2>Educational Background</h2>
       <div className="timeline">
@@ -108,7 +108,7 @@ function App() {
     
 
     return (
-      <div className = "contact"> 
+      <div className = {`${isNavAnimated ? 'fade-in' : ''} content`}> 
       <div className = "gifContainer">
         <div className = "time">
            Current time: {currentTime.toLocaleTimeString()}
@@ -137,13 +137,13 @@ function App() {
               <Link to="/" className="nav-link" onClick={handleNavigation}> Home </Link>
             </li>
             <li>
-              <Link to="/projects" className="nav-link"> Projects </Link>
+              <Link to="/projects" className="nav-link" onClick={handleNavigation}> Projects </Link>
             </li>
             <li>
-              <Link to="/about" className="nav-link"> About </Link>
+              <Link to="/about" className="nav-link" onClick={handleNavigation}> About </Link>
             </li>
             <li>
-              <Link to="/contact" className="nav-link"> Contact </Link>
+              <Link to="/contact" className="nav-link" onClick={handleNavigation}> Contact </Link>
             </li>
             <li>
             <button onClick={toggleTheme}>
