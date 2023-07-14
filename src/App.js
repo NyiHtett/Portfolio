@@ -103,6 +103,10 @@ function App() {
     );
   }
 
+  function Certifications(){
+    
+  }
+
   function Contact(){
     const [currentTime, setCurrentTime] = useState(new Date());
 
@@ -155,15 +159,19 @@ function App() {
               <Link to="/about" className="nav-link" onClick={handleNavigation}> About </Link>
             </li>
             <li>
-              <Link to="/contact" className="nav-link" onClick={handleNavigation}> Contact </Link>
+              <Link to="/certifications" className="nav-link" onClick={handleNavigation}> Certifications </Link>
             </li>
             <li>
+              <Link to="/contact" className="nav-link" onClick={handleNavigation}> Contact </Link>
+            </li>
+            <li className = "last-list">
             <button 
             onClick={() =>{
               toggleTheme();
               handleNavigation();
               changeImage();
             }}
+            className = "image-button"
             >
 {/* ./light.png */}
         
@@ -179,6 +187,7 @@ function App() {
        <Route path = "/projects" Component = {Projects} />
        <Route path = "/about" Component={About}/>
        <Route path = "/contact" Component={Contact}/>
+       <Route path = "/certifications" Component={Certifications}/>
        </Routes>
 
        </Router>

@@ -124,6 +124,10 @@ h2{
   transform: scale(1.5);
 }
 
+.horizontal-list li:last-child:hover{
+  transform: unset;
+}
+
 .Footer{
   margin-top: auto;
   max-height: 150px;
@@ -207,4 +211,9 @@ ai styling
 
 .fade-in{
   animation: fadeIn 1s ease;
+}
+
+.image-button{
+  background-color: white;
+  transform: unset;
 }
