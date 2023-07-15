@@ -1,8 +1,10 @@
-import './App.css';
+
 import './Logo.png';
 
-
+import Certifications from './Certifications';
 import gifImage from './among-us.gif';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 import Rate from './Rate.js';
 import About from './About.js';
 import * as Three from 'three';
@@ -103,47 +105,6 @@ function App() {
     );
   }
 
-  function Certifications(){
-
-    return (
-      <div>
-        <ul style = {{listStyle : 'none'}}>
-          <li>
-            <img src = { require('./google.png')} width = "100"/>
-            <div>
-              <h3> Technical Support Fundamentals </h3>
-              <h4> published by google </h4>
-              <h5> Skills acquired</h5>
-              <li> Computer hardware</li>
-              <li> Communication</li>
-              <li> Binary code </li>
-              <li> Linux</li>
-              <li> Troubleshooting </li>
-              <li> Technical support  </li>
-              <li> Customer service </li>
-            </div>
-          </li>
-
-          <li>
-            <img src = { require('./meta.png')} width = "100"/>
-            <div>
-              <h3> Version control </h3>
-              <h4> published by meta </h4>
-              <h5> Skills acquired</h5>
-              <li> Computer hardware</li>
-              <li> Communication</li>
-              <li> Binary code </li>
-              <li> Linux</li>
-              <li> Troubleshooting </li>
-              <li> Technical support  </li>
-              <li> Customer service </li>
-            </div>
-          </li>
-        </ul>
-      </div>
-    );
-    
-  }
 
   function Contact(){
     const [currentTime, setCurrentTime] = useState(new Date());
@@ -183,7 +144,6 @@ function App() {
     
     
       <div className={`App Full-page ${theme}`}>
-        <script src="https://cdn.tailwindcss.com"></script>
         <div className="uppperbody">
         <Router>
         <nav>
@@ -246,7 +206,7 @@ function App() {
         </li>
         <li>
         <a href = "https://github.com/NyiHtett" target = "_blank"> 
-       <img src = {require('./Git.png')} width = "50" alt = "Github profile"/>
+       <img src = {require('./Git.png')} width = "50"/>
        </a>
         </li>
         <li>
