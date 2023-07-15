@@ -1,14 +1,23 @@
 
+.Full-page{
+  background-color: black;
+  min-height: 100vh;
+  min-width: 100vw;
+  flex: 1;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  box-sizing: border-box;
+}
 
 .App.light {
   display: flex;
-
   flex-direction: column;
   background-color: purple;
   color: white;
   text-align: center;
   height: 100%;
-  overflow-x: hidden;
+  
 }
 
 
@@ -44,7 +53,9 @@
 }
 
 
+
 .App {
+
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -59,11 +70,6 @@
 }
 
 
-.Full-page{
-  min-height: 100vh;
-  min-width: 100vw;
-  flex: 1;
-}
 .image-container{
   display: flex;
   justify-content: center;
@@ -95,9 +101,6 @@ h1{
   color: white;
 }
 
-h2{
-  color: purple;
-}
 
 .first-paragraph{
   font-size: 39px;
