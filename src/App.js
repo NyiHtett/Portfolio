@@ -113,7 +113,7 @@ function App() {
             <div>
               <h3> Technical Support Fundamentals </h3>
               <h4> published by google </h4>
-              <h5> Skills </h5>
+              <h5> Skills acquired</h5>
               <li> Computer hardware</li>
               <li> Communication</li>
               <li> Binary code </li>
@@ -125,11 +125,11 @@ function App() {
           </li>
 
           <li>
-            <img src = { require('./google.png')} width = "100"/>
+            <img src = { require('./meta.png')} width = "100"/>
             <div>
-              <h3> Technical Support Fundamentals </h3>
-              <h4> published by google </h4>
-              <h5> Skills </h5>
+              <h3> Version control </h3>
+              <h4> published by meta </h4>
+              <h5> Skills acquired</h5>
               <li> Computer hardware</li>
               <li> Communication</li>
               <li> Binary code </li>
@@ -181,9 +181,9 @@ function App() {
   return (
   
     
+    
       <div className={`App Full-page ${theme}`}>
-
-
+        <script src="https://cdn.tailwindcss.com"></script>
         <div className="uppperbody">
         <Router>
         <nav>
