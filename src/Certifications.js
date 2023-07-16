@@ -1,6 +1,9 @@
+
+
 function Certifications() {
+     
     return(
-        <div>
+        <div >
         <ul style = {{listStyle : 'none'}}>
 
         <div class="container">

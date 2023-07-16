@@ -182,13 +182,17 @@ function App() {
           </div>
         </nav>
 
-       <Routes>
-       <Route path = "/" Component={Home} />
-       <Route path = "/projects" Component = {Projects} />
-       <Route path = "/about" Component={About}/>
-       <Route path = "/contact" Component={Contact}/>
-       <Route path = "/certifications" Component={Certifications}/>
-       </Routes>
+        <Routes>
+  <Route path="/" element={<Home />} />
+  <Route path="/projects" element={<Projects />} />
+  <Route path="/about" element={<About />} />
+  <Route path="/contact" element={<Contact />} />
+  <Route
+    path="/certifications"
+    element={<Certifications/>}
+  />
+</Routes>
+
 
        </Router>
         </div>
