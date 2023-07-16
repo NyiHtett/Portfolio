@@ -47,7 +47,7 @@ function App() {
        </div>
 
        <p class = "first-paragraph">
-        "Aspiring software engineering"
+        "Aspiring software engineer"
        </p>
       
       </div>
