@@ -49,7 +49,7 @@ function App() {
        <p class = "first-paragraph">
         "Aspiring software engineering"
        </p>
-       <p> Coming right up</p> 
+      
       </div>
     );
   }
