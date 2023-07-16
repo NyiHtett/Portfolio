@@ -2,7 +2,7 @@
 import './Logo.png';
 
 import Certifications from './Certifications';
-import gifImage from './among-us.gif';
+import gifImage from './dance.gif';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import Rate from './Rate.js';
@@ -129,7 +129,7 @@ function App() {
            Current time: {currentTime.toLocaleTimeString()}
         </div>
         <br/>
-      <img width="200" src={gifImage} alt="Example GIF" />
+      <img width="400" src={gifImage} alt="Example GIF" />
       </div>
       <div className = "contactInfo"> 
       <p>Phone number: 5103589824</p>
