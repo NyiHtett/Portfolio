@@ -10,6 +10,7 @@ import About from './About.js';
 import * as Three from 'three';
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
+import Music from './Music.js';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -188,6 +189,7 @@ function App() {
   <Route path="/projects" element={<Projects />} />
   <Route path="/about" element={<About />} />
   <Route path="/contact" element={<Contact />} />
+  <Route path="/music" element={<Music/>} />
   <Route
     path="/certifications"
     element={<Certifications/>}
