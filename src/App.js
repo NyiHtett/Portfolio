@@ -125,16 +125,17 @@ function App() {
     return (
       <div className = {`${isNavAnimated ? 'fade-in' : ''} content`}> 
       <div className = "gifContainer">
-        <div className = "time">
-           Current time: {currentTime.toLocaleTimeString()}
-        </div>
-        <br/>
-      <img width="400" src={gifImage} alt="Example GIF" />
+      <img width="400" src={gifImage} alt="Example GIF" style={{padding: '20px'}}/>
       </div>
       <div className = "contactInfo"> 
-      <p>Phone number: 5103589824</p>
+     
+        <br/>
+        <h2 style = {{maxWidth:'', alignItems:'center',textShadow: '2px black', padding: '20px'}}> Alright we gotta roll</h2>
+        <div style={{textAlign:'center'}}>
+        <p>Phone number: 5103589824</p>
         <p>Email: nyihtet4dev@icloud.com</p>
         <p>Address: 39042 donnerway fremont CA</p>
+        </div>
       </div>
       </div>
     );

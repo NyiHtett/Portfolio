@@ -78,6 +78,27 @@ function Certifications() {
             </div>
           </li> 
   </div>
+  <br/><br/><br/>
+  <div class="row" style={{justifyContent:'space-between'}}>
+  
+  <li class = "col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
+    <div class = "row p-4" style={{margin: "20px", fontFamily:"fantasy"}}>
+    <img class = "col-sm-3" src = { require('./google.png')} />
+    <h3 class = "col-sm-9" style={{display:'flex', alignItems:'center'}}> Operating Systems: Becoming a Power User  </h3>
+    </div>
+            <div style={{fontSize:"20px", marginBottom:'50px'}}>
+              <li>User Experience Design</li>
+              <li> Wireframing</li>
+              <li> Prototyping </li>
+              <li> UX Research</li>
+              <li> User Experience (UX) </li>
+              <a role="button" target="_blank" href="https://coursera.org/share/fb3169698a1d9b50721247579e1e3b08" 
+              style={{marginTop:'40px'}} class="btn btn-outline-secondary">Show Credential</a>
+            </div>
+            
+   </li>
+   
+  </div>
 
 
 </div>
