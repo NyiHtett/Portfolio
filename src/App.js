@@ -203,7 +203,7 @@ function App() {
   <Route path="/music" element={<Music/>} />
   <Route
     path="/certifications"
-    element={<Certifications/>}
+    element={<Certifications additionalInfo = {isNavAnimated}/>}
   />
 </Routes>
 

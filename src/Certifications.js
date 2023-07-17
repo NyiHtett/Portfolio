@@ -1,9 +1,8 @@
-
-
+import { useState } from 'react';
 function Certifications() {
-     
+    
     return(
-        <div >
+      <div style={{animation:"fadeIn 1s ease-in-out"}}>
         <ul style = {{listStyle : 'none'}}>
 
         <div class="container">
