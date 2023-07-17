@@ -58,7 +58,7 @@ function App() {
   function Projects(){
     return (
       <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
-        <div className = "weather-app">
+        {/* <div className = "weather-app">
         <a href='https://my-mapify.vercel.app/'>
           <img  className = "weather-image" width = "300" src={require('./weatherapp.png')} />
         </a>
@@ -67,7 +67,18 @@ function App() {
           <br/>
           Generate the temperature and weather condition of a specific city
         </p>
-        </div>
+        </div> */}
+        <div class="card" style={{width: "22rem",marginLeft:"50px"}}>
+  <img class="card-img-top" src={require('./weatherapp.png')}  alt="Card image cap"/>
+  <div class="card-body">
+    <h5 class="card-title">Mapify</h5>
+    <p class="card-text">A react web app which generate the temperature and weather condition of a specific city </p>
+    <a href="https://my-mapify.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
+  </div>
+</div>
+
+        
+        
       </div>
     );
   }
