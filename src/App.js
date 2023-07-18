@@ -18,7 +18,7 @@ function App() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [isNavAnimated, setIsNavAnimated] = useState(false);
   const [isChangeImage,setChangeImage] = useState(false);
-
+  const [git, setGit] = useState(true);
   function handleNavigation() {
     setIsNavAnimated(true); 
     setTimeout(() => {
@@ -188,6 +188,12 @@ function App() {
               toggleTheme();
               handleNavigation();
               changeImage();
+              if ( git == true){
+                setGit(false);
+              }
+              else {
+                setGit(true);
+              }
             }}
             className = "image-button"
             >
@@ -229,7 +235,7 @@ function App() {
         </li>
         <li>
         <a href = "https://github.com/NyiHtett" target = "_blank"> 
-       <img src = {require('./Git.png')} width = "50"/>
+       <img src = {require(`./${git ? 'Git' : 'gitt'}.png`)} width = "50"/>
        </a>
         </li>
         <li>
@@ -238,8 +244,8 @@ function App() {
        </a>
         </li>
         <li>
-          <a href="mailto:nyihtet4dev@icloud.com"> 
-          <img src = {require('./email.png')} width = "50" />
+          <a href="https://www.youtube.com/channel/UCQnPj__dVP9FATFTO42-NNw"> 
+          <img src = {require('./youtube (1).png')} width = "50" />
           </a>
         </li>
        </ul>

@@ -127,9 +127,7 @@ h1{
   transform: scale(1.5);
 }
 
-.horizontal-list li:last-child:hover{
-  transform: unset;
-}
+
 
 .Footer{
   margin-top: auto;
