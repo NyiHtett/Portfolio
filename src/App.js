@@ -11,6 +11,7 @@ import * as Three from 'three';
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import Music from './Music.js';
+import TodoList from './TodoList';
 
 function App() {
   const [theme, setTheme] = useState('light');
@@ -76,6 +77,10 @@ function App() {
     <a href="https://my-mapify.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
   </div>
 </div>
+<div>
+<TodoList/>
+</div>
+
 
         
         
