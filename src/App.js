@@ -125,6 +125,15 @@ function App() {
 
   function Contact(){
     const [currentTime, setCurrentTime] = useState(new Date());
+    const [isRowVisible, setRowVisible] = useState(false);
+
+    const handleEnter = () => {
+          setRowVisible(true);
+    }
+
+    const handleLeave = () =>{
+          setRowVisible(false);
+    }
 
     useEffect(()=>{
       const timer = setInterval(()=>{
@@ -147,11 +156,16 @@ function App() {
       <div className = "contactInfo"> 
      
         <br/>
-        <h2 style = {{maxWidth:'', alignItems:'center',textShadow: '2px black', padding: '20px'}}> Alright we gotta roll</h2>
-        <div style={{textAlign:'center'}}>
-        <p>Phone number: 5103589824</p>
-        <p>Email: nyihtet4dev@icloud.com</p>
-        <p>Address: 39042 donnerway fremont CA</p>
+        <h2 style = {{maxWidth:'', alignItems:'center', marginBottom:'100px'}}> Move below for hidden contact info</h2>
+        <div class = {`contactRowWrapper row border border-white ${isRowVisible ? 'visible': ''}`} onMouseEnter={handleEnter} onMouseLeave={handleLeave}     style ={{backgroundColor:'orange', color:'black'}} >
+        <div class="col-sm-4">
+          <img src = {require('./phone.png')} width = "50px" style = {{margin: '20px'}}/>
+          5103589824</div>
+        <div class="col-sm-4">
+        <img src = {require('./email.png')} width = "50px" style = {{margin: '20px'}}/>
+          nyihtet4dev@icloud.com</div>
+        <div class="col-sm-4">
+        <img src = {require('./map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
       </div>
       </div>

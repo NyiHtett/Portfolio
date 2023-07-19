@@ -218,3 +218,15 @@ ai styling
   background-color: white;
   transform: unset;
 }
+
+
+.contactRowWrapper{
+  opacity: 0;
+  max-height: 0;
+  transition: max-height 0.1s ease, opacity 0.1s ease;
+}
+
+.contactRowWrapper.visible{
+  max-height: 300px;
+  opacity: 1;
+}
