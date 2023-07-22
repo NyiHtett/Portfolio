@@ -32,23 +32,7 @@ function TodoList() {
 
   return (
     <div>
-      <h2>Coming projects innaminit</h2>
-      <input
-        type="text"
-        value={newTodo}
-        onChange={(e) => setNewTodo(e.target.value)}
-        placeholder="Enter a new task ..."
-      />
-      <button onClick={handleAddTodo}>Add</button>
-
-      <ul>
-        {todos.map((todo, index) => (
-          <li key={index}>
-            {todo}
-            <button onClick={() => handleRemoveTodo(index)}>Remove</button>
-          </li>
-        ))}
-      </ul>
+      
     </div>
   );
 }

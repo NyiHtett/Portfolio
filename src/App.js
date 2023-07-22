@@ -58,7 +58,7 @@ function App() {
 
   function Projects(){
     return (
-      <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
+      <div style = {{display:'flex', flexDirection:"row"}}className = {`${isNavAnimated ? 'fade-in' : ''}`}>
         {/* <div className = "weather-app">
         <a href='https://my-mapify.vercel.app/'>
           <img  className = "weather-image" width = "300" src={require('./weatherapp.png')} />
@@ -77,8 +77,14 @@ function App() {
     <a href="https://my-mapify.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
   </div>
 </div>
-<div>
-<TodoList/>
+
+<div class="card" style={{width: "22rem",marginLeft:"50px"}}>
+  <img class="card-img-top"  src={require('./nyiWebflow.png')}  alt="Card image cap"/>
+  <div class="card-body">
+    <h5 class="card-title"> Artistic Flowfolio</h5>
+    <p class="card-text"> Duplicate portfolio using modern front-end web design tool - Webflow</p>
+    <a href="https://nyi-practice.webflow.io/" target = "_blank" class="btn btn-primary">Go to the website</a>
+  </div>
 </div>
 
 
