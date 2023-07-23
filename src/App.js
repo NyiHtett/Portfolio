@@ -58,7 +58,7 @@ function App() {
 
   function Projects(){
     return (
-      <div style = {{display:'flex', flexDirection:"row"}}className = {`${isNavAnimated ? 'fade-in' : ''}`}>
+      <div style = {{gap:100,display:'flex', flexDirection:"row"}}className = {`${isNavAnimated ? 'fade-in' : ''}`}>
         {/* <div className = "weather-app">
         <a href='https://my-mapify.vercel.app/'>
           <img  className = "weather-image" width = "300" src={require('./weatherapp.png')} />
