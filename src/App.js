@@ -156,25 +156,19 @@ function App() {
 
     return (
       <div className = {`${isNavAnimated ? 'fade-in' : ''} content`}> 
-      <div className = "gifContainer">
-      <img width="400" src={gifImage} alt="Example GIF" style={{padding: '20px'}}/>
-      </div>
-      <div className = "contactInfo"> 
-     
-        <br/>
-        <h2 style = {{maxWidth:'', alignItems:'center', marginBottom:'100px'}}> Move below for hidden contact info</h2>
-        <div class = {`contactRowWrapper row border border-white ${isRowVisible ? 'visible': ''}`} onMouseEnter={handleEnter} onMouseLeave={handleLeave}     style ={{backgroundColor:'orange', color:'black'}} >
-        <div class="col-sm-4">
+        <div className = "contactWrapper">
+          
+        <div>
           <img src = {require('./phone.png')} width = "50px" style = {{margin: '20px'}}/>
           5103589824</div>
-        <div class="col-sm-4">
+        <div>
         <img src = {require('./email.png')} width = "50px" style = {{margin: '20px'}}/>
           nyihtet4dev@icloud.com</div>
-        <div class="col-sm-4">
+        <div >
         <img src = {require('./map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
       </div>
-      </div>
+      
     );
   }
   return (
