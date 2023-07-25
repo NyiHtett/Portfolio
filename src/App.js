@@ -69,7 +69,10 @@ function App() {
           Generate the temperature and weather condition of a specific city
         </p>
         </div> */}
-        <div class="card" style={{width: "22rem",marginLeft:"50px"}}>
+
+        <div className='container'>
+          <div className='row'>
+        <div class="card col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
   <img class="card-img-top" src={require('./weatherapp.png')}  alt="Card image cap"/>
   <div class="card-body">
     <h5 class="card-title">Mapify</h5>
@@ -78,7 +81,7 @@ function App() {
   </div>
 </div>
 
-<div class="card" style={{width: "22rem",marginLeft:"50px"}}>
+<div class="card  col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
   <img class="card-img-top"  src={require('./nyiWebflow.png')}  alt="Card image cap"/>
   <div class="card-body">
     <h5 class="card-title"> Artistic Flowfolio</h5>
@@ -86,7 +89,9 @@ function App() {
     <a href="https://nyi-practice.webflow.io/" target = "_blank" class="btn btn-primary">Go to the website</a>
   </div>
 </div>
+</div>
 
+</div>
 
         
         
@@ -179,24 +184,24 @@ function App() {
         <div className="uppperbody">
         <Router>
         <nav>
-          <div >
-          <ul className = "horizontal-list">
-            <li>
+          <div className = "container">
+          <ul className = "horizontal-list row">
+            <li className = "col-12 col-lg-2">
               <Link to="/" className="nav-link" onClick={handleNavigation}> Home </Link>
             </li>
-            <li>
+            <li className = "col-12 col-lg-2">
               <Link to="/projects" className="nav-link" onClick={handleNavigation}> Projects </Link>
             </li>
-            <li>
+            <li className = "col-12 col-lg-2">
               <Link to="/about" className="nav-link" onClick={handleNavigation}> About </Link>
             </li>
-            <li>
+            <li className = "col-12 col-lg-2">
               <Link to="/certifications" className="nav-link" onClick={handleNavigation}> Certifications </Link>
             </li>
-            <li>
+            <li className = "col-12 col-lg-2">
               <Link to="/contact" className="nav-link" onClick={handleNavigation}> Contact </Link>
             </li>
-            <li className = "last-list">
+            <li className = "last-list col-12 col-lg-2">
             <button 
             onClick={() =>{
               toggleTheme();

@@ -8,9 +8,9 @@ function Certifications() {
         <div class="container">
   <div class="row" style={{justifyContent:'space-between'}}>
   
-  <li class = "col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
+  <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
     <div class = "row p-4" style={{margin: "20px", fontFamily:"fantasy"}}>
-    <img class = "col-sm-3" src = { require('./google.png')} />
+    <img class = "col-3 col-sm-3" src = { require('./google.png')} />
     <h3 class = "col-sm-9" style={{display:'flex', alignItems:'center'}}> Technical Support Fundamentals  </h3>
     </div>
             <div style={{fontSize:"20px", marginBottom:'50px'}}>
@@ -26,9 +26,9 @@ function Certifications() {
             </div>
             
    </li>
-   <li class = "col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
+   <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
     <div class = "row" style={{margin: "20px", fontFamily:"fantasy", color:"white"}}>
-            <img class = "col-sm-3" style={{margin: "20px"}} src = { require('./meta.png')} />
+            <img class = "col-3 col-sm-3" style={{margin: "20px"}} src = { require('./meta.png')} />
             <h3 class = "col-sm-7 text-justify" style={{display:'flex', alignItems:'center', margin: "20px"}}> Version control </h3>
             </div>
 
@@ -46,9 +46,9 @@ function Certifications() {
   <br/><br/><br/>
   <div class="row" style={{justifyContent:'space-between'}}>
   
-  <li class = "col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
+  <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
     <div class = "row p-4" style={{margin: "20px", fontFamily:"fantasy"}}>
-    <img class = "col-sm-3" src = { require('./google.png')} />
+    <img class = "col-3 col-sm-3" src = { require('./google.png')} />
     <h3 class = "col-sm-9" style={{display:'flex', alignItems:'center'}}> Foundations of User Experience  </h3>
     </div>
             <div style={{fontSize:"20px", marginBottom:'50px'}}>
@@ -62,9 +62,9 @@ function Certifications() {
             </div>
             
    </li>
-   <li class = "col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
+   <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
     <div class = "row" style={{margin: "20px", fontFamily:"fantasy", color:"white"}}>
-            <img class = "col-sm-3" style={{margin: "20px"}} src = { require('./meta.png')} />
+            <img class = "col-3 col-sm-3" style={{margin: "20px"}} src = { require('./meta.png')} />
             <h3 class = "col-sm-7 text-justify" style={{display:'flex', alignItems:'center', margin: "20px"}}> Introduction to IOS development </h3>
             </div>
 
@@ -80,9 +80,9 @@ function Certifications() {
   <br/><br/><br/>
   <div class="row" style={{justifyContent:'space-between'}}>
   
-  <li class = "col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
+  <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
     <div class = "row p-4" style={{margin: "20px", fontFamily:"fantasy"}}>
-    <img class = "col-sm-3" src = { require('./google.png')} />
+    <img class = "col-3 col-sm-3" src = { require('./google.png')} />
     <h3 class = "col-sm-9" style={{display:'flex', alignItems:'center'}}> Operating Systems: Becoming a Power User  </h3>
     </div>
             <div style={{fontSize:"20px", marginBottom:'50px'}}>
