@@ -72,6 +72,7 @@ function App() {
 
         <div className='container'>
           <div className='row'>
+            
         <div class="card col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
   <img class="card-img-top" src={require('./weatherapp.png')}  alt="Card image cap"/>
   <div class="card-body">
@@ -88,6 +89,27 @@ function App() {
     <p class="card-text"> Duplicate portfolio using modern front-end web design tool - Webflow</p>
     <a href="https://nyi-practice.webflow.io/" target = "_blank" class="btn btn-primary">Go to the website</a>
   </div>
+</div>
+
+<div class="card  col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
+  <img class="card-img-top"  src={require('./BookShareHub.png')}  alt="Card image cap"/>
+  <div class="card-body">
+    <h5 class="card-title"> BookShareHub</h5>
+    <p class="card-text"> Website intended to share my books </p>
+    <a href="https://book-share-hub.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
+  </div>
+</div>
+
+<div class = "row" style ={{marginTop:20}}> 
+
+<div class="card  col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
+  <img class="card-img-top" src={require('./ageverifypro.png')}  alt="Card image cap"/>
+  <div class="card-body">
+    <h5 class="card-title"> AgeVerifyPro</h5>
+    <p class="card-text"> Website check your financial status based on your age </p>
+    <a href="https://ageverify.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
+  </div>
+</div>
 </div>
 </div>
 
