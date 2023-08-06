@@ -217,8 +217,9 @@ ai styling
 .image-button{
   background-color: white;
   transform: unset;
-}
+  border-radius: 50%;
 
+}
 
 .contactWrapper{
   color: black;

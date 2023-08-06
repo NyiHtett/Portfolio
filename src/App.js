@@ -12,7 +12,7 @@ import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import Music from './Music.js';
 import TodoList from './TodoList';
-
+import Projects from './Projects.js';
 function App() {
   const [theme, setTheme] = useState('light');
   const [currentTime, setCurrentTime] = useState(new Date());
@@ -56,70 +56,7 @@ function App() {
     );
   }
 
-  function Projects(){
-    return (
-      <div style = {{gap:100,display:'flex', flexDirection:"row"}}className = {`${isNavAnimated ? 'fade-in' : ''}`}>
-        {/* <div className = "weather-app">
-        <a href='https://my-mapify.vercel.app/'>
-          <img  className = "weather-image" width = "300" src={require('./weatherapp.png')} />
-        </a>
-        <p className = "weather-content">
-          A simple react weather application 
-          <br/>
-          Generate the temperature and weather condition of a specific city
-        </p>
-        </div> */}
-
-        <div className='container'>
-          <div className='row'>
-            
-        <div class="card col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
-  <img class="card-img-top" src={require('./weatherapp.png')}  alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title">Mapify</h5>
-    <p class="card-text">A react web app which generate the temperature and weather condition of a specific city </p>
-    <a href="https://my-mapify.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
-  </div>
-</div>
-
-<div class="card  col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
-  <img class="card-img-top"  src={require('./nyiWebflow.png')}  alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title"> Artistic Flowfolio</h5>
-    <p class="card-text"> Duplicate portfolio using modern front-end web design tool - Webflow</p>
-    <a href="https://nyi-practice.webflow.io/" target = "_blank" class="btn btn-primary">Go to the website</a>
-  </div>
-</div>
-
-<div class="card  col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
-  <img class="card-img-top"  src={require('./BookShareHub.png')}  alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title"> BookShareHub</h5>
-    <p class="card-text"> Website intended to share my books </p>
-    <a href="https://book-share-hub.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
-  </div>
-</div>
-
-<div class = "row" style ={{marginTop:20}}> 
-
-<div class="card  col-12 col-lg-6" style={{width: "22rem",marginLeft:"50px"}}>
-  <img class="card-img-top" src={require('./ageverifypro.png')}  alt="Card image cap"/>
-  <div class="card-body">
-    <h5 class="card-title"> AgeVerifyPro</h5>
-    <p class="card-text"> Website check your financial status based on your age </p>
-    <a href="https://ageverify.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
-  </div>
-</div>
-</div>
-</div>
-
-</div>
-
-        
-        
-      </div>
-    );
-  }
+  
 
   function About(){
     return (
@@ -236,11 +173,10 @@ function App() {
                 setGit(true);
               }
             }}
-            className = "image-button"
-            >
+            className = "image-button">
 {/* ./light.png */}
         
-         <img src={require(`./${isChangeImage ? 'moon' : 'light'}.png`)} width = "50" height = "50" />
+         <img src={require(`./${isChangeImage ? 'moon' : 'light'}.png`)} width="50"/>
        </button>
             </li>
           </ul>
@@ -249,7 +185,7 @@ function App() {
 
         <Routes>
   <Route path="/" element={<Home />} />
-  <Route path="/projects" element={<Projects />} />
+  <Route path="/projects" element={<Projects/>} />
   <Route path="/about" element={<About />} />
   <Route path="/contact" element={<Contact />} />
   <Route path="/music" element={<Music/>} />
