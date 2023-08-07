@@ -3,7 +3,12 @@ import React from 'react'
 function Projects() {
   return (
     <div class = "ProjectsWrapper">
-        
+        <div class = "row">
+        <div class = "col-12">
+              <img class="card-img-top" style={{width: '500px'}} src={require('./weatherapp.png')}  alt="Card image cap"/>
+        </div>
+      
+        </div>
     </div>
   );
 }
@@ -11,7 +16,7 @@ function Projects() {
 export default Projects;
 
 
-{/* <img class="card-img-top" src={require('./weatherapp.png')}  alt="Card image cap"/>
+{/* 
         <h5 class="card-title">Mapify</h5>
     <p class="card-text">A react web app which generate the temperature and weather condition of a specific city </p>
     <a href="https://my-mapify.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
