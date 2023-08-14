@@ -8,6 +8,7 @@ function Projects() {
     },[])
   return (
     <div class = {`ProjectsWrapper ${showProjects ? 'show': ''}`}>
+            
         <div class = "ProjectItems" >
               <img class="ProjectsImage" src={require('./weatherapp.png')}  alt="Card image cap"/>
         <div class = "ProjectDescription" >
@@ -25,6 +26,17 @@ function Projects() {
         <a href="https://header-goodworkhub.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
         </div>
         </div> 
+
+        <div class = "ProjectItems" >
+              <video controls style={{width:'500px'}}>
+                  <source src={require('./demo.mp4')} type = "video/mp4"></source>
+              </video>
+        <div class = "ProjectDescription" >
+              <h3> Good Work Hub Flutter app </h3>
+              <p>A basic flutter app with sign in and log in functionalities </p>
+              <a href="https://github.com/goodworkhub-dev/flutter-mobile-app" target = "_blank" class="btn btn-primary">Go to the git repo</a>
+        </div>
+        </div>
 
         <div class = "ProjectItems" >
               <img class="ProjectsImage" src={require('./nyiWebflow.png')}  alt="Card image cap"/>
