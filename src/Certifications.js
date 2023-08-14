@@ -95,8 +95,56 @@ function Certifications() {
             </div>
             
    </li>
+
+   <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
+    <div class = "row" style={{margin: "20px", fontFamily:"fantasy", color:"white"}}>
+            <img class = "col-3 col-sm-3" style={{margin: "20px"}} src = { require('./meta.png')} />
+            <h3 class = "col-sm-7 text-justify" style={{display:'flex', alignItems:'center', margin: "20px"}}> HTML and CSS in depth </h3>
+            </div>
+
+            <div style={{fontSize:"20px", padding:"30px", marginBottom:'50px', color:'white'}} class="font-weight-bold">
+              <li> Pseudocode </li>
+              <a role="button" target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/ELRS4SVZBKKZ" 
+               style={{marginTop:'60px'}} class="btn btn-primary">Show Credential</a>
+            </div>
+          </li> 
    
   </div>
+
+  <br/><br/><br/>
+
+  <div class="row" style={{justifyContent:'space-between'}}>
+  
+  <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
+    <div class = "row" style={{margin: "20px", fontFamily:"fantasy", color:"white"}}>
+            <img class = "col-3 col-sm-3" style={{margin: "20px"}} src = { require('./meta.png')} />
+            <h3 class = "col-sm-7 text-justify" style={{display:'flex', alignItems:'center', margin: "20px"}}> Introduction to front-end development </h3>
+            </div>
+
+            <div style={{fontSize:"20px", padding:"30px", marginBottom:'50px', color:'white'}} class="font-weight-bold">
+              <a role="button" target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/KZ9D6M3W4CL5" 
+               style={{marginTop:'60px'}} class="btn btn-primary">Show Credential</a>
+            </div>
+          </li> 
+
+   <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
+    <div class = "row" style={{margin: "20px", fontFamily:"fantasy", color:"white"}}>
+            <img class = "col-3 col-sm-3" style={{margin: "20px"}} src = { require('./meta.png')} />
+            <h3 class = "col-sm-7 text-justify" style={{display:'flex', alignItems:'center', margin: "20px"}}> Programming with javascript </h3>
+            </div>
+
+            <div style={{fontSize:"20px", padding:"30px", marginBottom:'50px', color:'white'}} class="font-weight-bold">
+              <li> javascript </li>
+              <li> jest </li>
+              <li> unit testing </li>
+              <a role="button" target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/7MDRMLXDF8QN" 
+               style={{marginTop:'60px'}} class="btn btn-primary">Show Credential</a>
+            </div>
+          </li> 
+   
+  </div>
+
+  
 
 
 </div>

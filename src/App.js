@@ -2,7 +2,6 @@
 import './Logo.png';
 
 import Certifications from './Certifications';
-import gifImage from './dance.gif';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import Rate from './Rate.js';
@@ -11,7 +10,6 @@ import * as Three from 'three';
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import Music from './Music.js';
-import TodoList from './TodoList';
 import Projects from './Projects.js';
 function App() {
   const [theme, setTheme] = useState('light');

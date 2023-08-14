@@ -1,8 +1,13 @@
 import React from 'react'
-
+import { useEffect, useState } from 'react';
 function Projects() {
+    const [showProjects, setShowProjects] = useState(false);
+
+    useEffect(()=>{
+      setShowProjects(true);
+    },[])
   return (
-    <div class = "ProjectsWrapper">
+    <div class = {`ProjectsWrapper ${showProjects ? 'show': ''}`}>
         <div class = "ProjectItems" >
               <img class="ProjectsImage" src={require('./weatherapp.png')}  alt="Card image cap"/>
         <div class = "ProjectDescription" >
