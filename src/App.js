@@ -1,19 +1,15 @@
-
-import './Logo.png';
-
-import Certifications from './Certifications';
+import Certifications from './components/Certifications';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
-import Rate from './Rate.js';
-import About from './About.js';
-import * as Three from 'three';
+import About from './components/About.js';
 import { BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
-import Music from './Music.js';
-import Projects from './Projects.js';
+import Music from './components/Music.js';
+import Projects from './components/Projects.js';
+import Contact from './components/Contact';
+
 function App() {
   const [theme, setTheme] = useState('light');
-  const [currentTime, setCurrentTime] = useState(new Date());
   const [isNavAnimated, setIsNavAnimated] = useState(false);
   const [isChangeImage,setChangeImage] = useState(false);
   const [git, setGit] = useState(true);
@@ -54,85 +50,6 @@ function App() {
     );
   }
 
-  
-
-  function About(){
-    return (
-      <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
-        <div className="about">
-      <h2>Educational Background</h2>
-      <div className="timeline">
-      <div className="timeline-item">
-          <h3>2022 - Present</h3>
-          <h4>Ohlone College</h4>
-          <p>Bachelor of Science in Computer Science</p>
-          <p>Major GPA: 4.0</p>
-        </div>
-        <div className="timeline-item">
-          <h3>2019 - 2020</h3>
-          <h4>UCSY</h4>
-          <p>Bachelor of Science in Computer Science</p>
-        </div>
-        <div className="timeline-item">
-          <h3>2017 - 2019</h3>
-          <h4>  CAE </h4>
-          <p>High School Diploma</p>
-          <p>Achievements: Honor Roll</p>
-        </div>
-        <div className="timeline-item">
-          <h3>2014 - 2017</h3>
-          <h4>Middle School BEHS(3)</h4>
-          <p>Achievements: Student Council Member</p>
-        </div>
-      </div>
-    </div>
-      </div>
-    );
-  }
-
-
-  function Contact(){
-    const [currentTime, setCurrentTime] = useState(new Date());
-    const [isRowVisible, setRowVisible] = useState(false);
-
-    const handleEnter = () => {
-          setRowVisible(true);
-    }
-
-    const handleLeave = () =>{
-          setRowVisible(false);
-    }
-
-    useEffect(()=>{
-      const timer = setInterval(()=>{
-        setCurrentTime(new Date());
-      },1000)
-
-      return () => {
-        clearInterval(timer);
-      }
-
-    }, []);
-
-    
-
-    return (
-      <div className = {`${isNavAnimated ? 'fade-in' : ''} content`}> 
-        <div className = "contactWrapper">
-          
-        <div>
-          <img src = {require('./phone.png')} width = "50px" style = {{margin: '20px'}}/>
-          5103589824</div>
-        <div>
-        <img src = {require('./email.png')} width = "50px" style = {{margin: '20px'}}/>
-          nyihtet4dev@icloud.com</div>
-        <div >
-        <img src = {require('./map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
-        </div>
-      </div>
-      
-    );
-  }
   return (
   
       
