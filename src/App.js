@@ -7,7 +7,7 @@ import React, { useEffect, useState } from 'react';
 import Music from './components/Music.js';
 import Projects from './components/Projects.js';
 import Contact from './components/Contact';
-
+import './App.css';
 function App() {
   const [theme, setTheme] = useState('light');
   const [isNavAnimated, setIsNavAnimated] = useState(false);
@@ -39,7 +39,7 @@ function App() {
     return (
       <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
         <div className = "image-container">
-       <img src={require('./port.jpg')} className = "profile-image" width = "200" />
+       <img src={require('./assets/port.jpg')} className = "profile-image" width = "200" />
        </div>
 
        <p class = "first-paragraph">
@@ -91,7 +91,7 @@ function App() {
             className = "image-button">
 {/* ./light.png */}
         
-         <img src={require(`./${isChangeImage ? 'moon' : 'light'}.png`)} width="50"/>
+         <img src={require(`${isChangeImage ? './assets/moon' : './assets/light'}.png`)} width="50"/>
        </button>
             </li>
           </ul>
@@ -122,22 +122,22 @@ function App() {
        <ul className = "horizontal-list">
         <li>
         <a href = "https://www.linkedin.com/feed/" target = "_blank"> 
-       <img src = {require('./Logo.png')} width = "50"  alt = "LinkedIn Logo"/>
+       <img src = {require('./assets/Logo.png')} width = "50"  alt = "LinkedIn Logo"/>
        </a>
         </li>
         <li>
         <a href = "https://github.com/NyiHtett" target = "_blank"> 
-       <img src = {require(`./${git ? 'Git' : 'gitt'}.png`)} width = "50"/>
+       <img src = {require(`./assets/${git ? 'Git' : 'gitt'}.png`)} width = "50"/>
        </a>
         </li>
         <li>
         <a href = "https://twitter.com/NyiHtet20765409" target = "_blank"> 
-       <img src = {require('./twitter.png')} width = "50" alt = "Github profile"/>
+       <img src = {require('./assets/twitter.png')} width = "50" alt = "Github profile"/>
        </a>
         </li>
         <li>
           <a href="https://www.youtube.com/channel/UCQnPj__dVP9FATFTO42-NNw"> 
-          <img src = {require('./youtube (1).png')} width = "50" />
+          <img src = {require('./assets/youtube (1).png')} width = "50" />
           </a>
         </li>
        </ul>

@@ -1,7 +1,7 @@
 function Music() {
     return(
         <div>
-            <img src={require('../Music.gif')}/>
+            <img src={require('../assets/Music.gif')}/>
         </div>
 
 

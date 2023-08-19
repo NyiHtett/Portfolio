@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import "bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/js/bootstrap";
 
 const Contact = () => {
 
