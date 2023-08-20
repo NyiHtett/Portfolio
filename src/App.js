@@ -75,8 +75,8 @@ function App() {
             <li className = "col-12 col-lg-2">
               <Link to="/contact" className="nav-link" onClick={handleNavigation}> Contact </Link>
             </li>
-            <li className = "last-list col-12 col-lg-2">
-            <button 
+            <li className = "lightswitch col-12 col-lg-2" onClick={toggleTheme}>
+            {/* <button 
             onClick={() =>{
               toggleTheme();
               handleNavigation();
@@ -89,10 +89,18 @@ function App() {
               }
             }}
             className = "image-button">
-{/* ./light.png */}
         
          <img src={require(`${isChangeImage ? './assets/moon' : './assets/light'}.png`)} width="50"/>
-       </button>
+       </button> */}
+       
+
+      
+          <input type = "checkbox" id = "toggle"/>
+          <label for = "toggle"></label>
+
+        
+
+
             </li>
           </ul>
           </div>
@@ -119,7 +127,7 @@ function App() {
        
        <div className = "Footer">
 
-       <ul className = "horizontal-list">
+       <ul className = "horizontal-list-footer">
         <li>
         <a href = "https://www.linkedin.com/feed/" target = "_blank"> 
        <img src = {require('./assets/Logo.png')} width = "50"  alt = "LinkedIn Logo"/>

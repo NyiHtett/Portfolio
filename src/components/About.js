@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 
-
 function About() {
 
   const [display, setDisplay] = useState(false);
@@ -12,8 +11,8 @@ function About() {
   },[])
 
   return (
-    <div className = {`${display ? '' : 'fade-in'}`}>
-        <div className="about">
+    <div className = {`${display ? 'fade-in' : ''}`}>
+      <div className="about">
       <h2>Educational Background</h2>
       <div className="timeline">
       <div className="timeline-item">
