@@ -1,5 +1,6 @@
 import React from 'react'
 import { useEffect, useState } from 'react';
+import ReactPlayer from 'react-player';
 function Projects() {
     const [showProjects, setShowProjects] = useState(false);
 
@@ -28,13 +29,26 @@ function Projects() {
         </div> 
 
         <div class = "ProjectItems" >
-              <video controls style={{width:'500px'}}>
-                  <source src={require('../assets/demo.mp4')} type = "video/mp4"></source>
-              </video>
+              <ReactPlayer
+              url = "https://www.youtube.com/watch?v=jKqS-c-PX14"
+              controls = {true}
+              />
         <div class = "ProjectDescription" >
               <h3> Good Work Hub Flutter app </h3>
               <p>A basic flutter app with sign in and log in functionalities </p>
               <a href="https://github.com/goodworkhub-dev/flutter-mobile-app" target = "_blank" class="btn btn-primary">Go to the git repo</a>
+        </div>
+        </div>
+
+        <div class = "ProjectItems" >
+              <ReactPlayer
+              url = "https://www.youtube.com/watch?v=gx_wrAExU8Y&t=33s"
+              controls = {true}
+              />
+        <div class = "ProjectDescription" >
+        <h3> Calculator</h3>
+        <p> A simple react Calculator web app </p>
+        <a href="https://calculator-react-nyihtett.vercel.app/" target = "_blank" class="btn btn-primary">Go to the website</a>
         </div>
         </div>
 
