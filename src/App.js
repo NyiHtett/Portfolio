@@ -42,7 +42,7 @@ function App() {
        <img src={require('./assets/port.jpg')} className = "profile-image" width = "200" />
        </div>
 
-       <p class = "first-paragraph">
+       <p class = "first-paragraph" style = {{marginTop: "50px"}}>
         "Aspiring web developer"
        </p>
       
@@ -75,11 +75,9 @@ function App() {
             <li className = "col-12 col-lg-2">
               <Link to="/contact" className="nav-link" onClick={handleNavigation}> Contact </Link>
             </li>
-            <li className = "lightswitch col-12 col-lg-2" onClick={toggleTheme}>
-            {/* <button 
-            onClick={() =>{
+            <li className = "lightswitch col-12 col-lg-2" 
+            onMouseDown={() =>{
               toggleTheme();
-              handleNavigation();
               changeImage();
               if ( git == true){
                 setGit(false);
@@ -88,6 +86,9 @@ function App() {
                 setGit(true);
               }
             }}
+            >
+            {/* <button 
+            
             className = "image-button">
         
          <img src={require(`${isChangeImage ? './assets/moon' : './assets/light'}.png`)} width="50"/>
