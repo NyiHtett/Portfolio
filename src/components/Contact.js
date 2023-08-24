@@ -11,19 +11,20 @@ const Contact = () => {
     },[])
 
     return(
+        
         <div className = {`${display ? 'fade-in' : ''} content`}> 
         <div className = "contactWrapper">
-          
         <div>
           <img src = {require('../assets/phone.png')} width = "50px" style = {{margin: '20px'}}/>
           5103589824</div>
         <div>
         <img src = {require('../assets/email.png')} width = "50px" style = {{margin: '20px'}}/>
-          nyihtet4dev@icloud.com</div>
+          <a href = "mailto:nyihtet4dev@icloud.com"> nyihtet4dev@icloud.com </a></div>
         <div >
         <img src = {require('../assets/map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
       </div>
+      
     );
 }
 
