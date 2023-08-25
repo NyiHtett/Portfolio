@@ -5,6 +5,20 @@ import "bootstrap/dist/js/bootstrap";
 const Contact = () => {
 
     const [display, setDisplay] = useState(false);
+    const [clientLocation, setClientLocation] = useState(null);
+
+    const distancePrompt = () => {
+      //get the client's location
+      if ("geolocation" in navigator){
+        navigator.geolocation.getCurrentPosition((position)=> {
+                  setClientLocation({
+                    lat: position.coords.latitude,
+                    lng: position.coords.longitude,
+                  })
+        });
+      }
+      alert(`location is lat: ${clientLocation.lat} and lng: ${clientLocation.lng}`);
+    }
 
     useEffect(()=>{
         setDisplay(true);
@@ -20,11 +34,10 @@ const Contact = () => {
         <div>
         <img src = {require('../assets/email.png')} width = "50px" style = {{margin: '20px'}}/>
           <a href = "mailto:nyihtet4dev@icloud.com"> nyihtet4dev@icloud.com </a></div>
-        <div >
+        <div onClick={distancePrompt} >
         <img src = {require('../assets/map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
       </div>
-      
     );
 }
 
