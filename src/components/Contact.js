@@ -9,15 +9,16 @@ const Contact = () => {
 
     const distancePrompt = () => {
       //get the client's location
+
       if ("geolocation" in navigator){
         navigator.geolocation.getCurrentPosition((position)=> {
                   setClientLocation({
                     lat: position.coords.latitude,
                     lng: position.coords.longitude,
-                  })
+                  });
         });
       }
-      alert(`location is lat: ${clientLocation.lat} and lng: ${clientLocation.lng}`);
+      clientLocation ? alert(`location is lat: ${clientLocation.lat} and lng: ${clientLocation.lng}`) : alert('Still fetching try later ...');
     }
 
     useEffect(()=>{
