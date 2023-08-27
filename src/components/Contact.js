@@ -7,6 +7,9 @@ const Contact = () => {
     const [display, setDisplay] = useState(false);
     const [clientLocation, setClientLocation] = useState(null);
 
+    //this is the lat and lng of (39042 donnerway fremont)
+    const [address, setAddress] = useState({ lat: 37.5369171, lng: -121.9967956});
+
     const distancePrompt = () => {
       //get the client's location
 
@@ -18,7 +21,7 @@ const Contact = () => {
                   });
         });
       }
-      clientLocation ? alert(`location is lat: ${clientLocation.lat} and lng: ${clientLocation.lng}`) : alert('Still fetching try later ...');
+      clientLocation ? alert(`location is lat: ${clientLocation.lat} and lng: ${clientLocation.lng}`) : alert('Still fetching try later ...');      
     }
 
     useEffect(()=>{
