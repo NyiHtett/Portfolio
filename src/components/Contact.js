@@ -10,6 +10,30 @@ const Contact = () => {
     //this is the lat and lng of (39042 donnerway fremont)
     const [address, setAddress] = useState({ lat: 37.5369171, lng: -121.9967956});
 
+    const toRadians = (degrees) => {
+          return degrees * (Math.PI/180);
+    }
+
+    //calculate distance
+    const calculateDistance = (coord1, coord2) => {
+      const earthRadius = 6371;
+
+      const lat1 = toRadians(coord1.lat) ;
+      const lng1 = toRadians(coord1.lng);
+      const lat2 = toRadians(coord2.lat);
+      const lng2 = toRadians(coord2.lng);
+
+      const dlat = lat2-lat1;
+      const dlon = lng2-lng1;
+
+      //formula
+      const a = Math.sin(dlat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dlon / 2) ** 2;
+      const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    
+      return earthRadius*c;
+
+    }
+
     const distancePrompt = () => {
       //get the client's location
 
@@ -22,6 +46,7 @@ const Contact = () => {
         });
       }
       clientLocation ? alert(`location is lat: ${clientLocation.lat} and lng: ${clientLocation.lng}`) : alert('Still fetching try later ...');      
+      console.log( "the distance is",calculateDistance(clientLocation, address), "km");
     }
 
     useEffect(()=>{
