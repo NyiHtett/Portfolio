@@ -4,7 +4,7 @@ import "bootstrap/dist/js/bootstrap";
 
 const Contact = () => {
 
-    const [display, setDisplay] = useState(false);
+    const [display, setDisplay] = useState(true);
     const [clientLocation, setClientLocation] = useState(null);
 
     //this is the lat and lng of (39042 donnerway fremont)
@@ -46,35 +46,38 @@ const Contact = () => {
         });
       }
       clientLocation ? alert(`location is lat: ${clientLocation.lat} and lng: ${clientLocation.lng}`) : alert('Still fetching try later ...');      
-      console.log( "the distance is",calculateDistance(clientLocation, address),"km");
+      if (clientLocation !== null){
+        const mapElement = document.getElementById("map");
+        mapElement.style.backgroundColor = "blue";
+        mapElement.textContent = "you are " + calculateDistance(clientLocation, address) +"km away from Nyi";
+      }
+      
     }
-
-    useEffect(()=>{
-        setDisplay(true);
-    },[])
 
     return(
         
         <div className = {`${display ? 'fade-in' : ''} content`}> 
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXeJpfEQIB3nn4tfIf--WXQfZZ8jCX5w&libraries=geometry" defer></script>
         <div className = "contactWrapper">
         <div>
           <img src = {require('../assets/phone.png')} width = "50px" style = {{margin: '20px'}}/>
-          5103589824</div>
+          (510) - 3589824</div>
         <div>
         <img src = {require('../assets/email.png')} width = "50px" style = {{margin: '20px'}}/>
           <a href = "mailto:nyihtet4dev@icloud.com"> nyihtet4dev@icloud.com </a></div>
         <div onClick={distancePrompt} >
         <img src = {require('../assets/map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
+        <div id="map" style={{margin: "30px" ,padding: "30px", animation:"fadeIn 3s ease"}}></div> 
       </div>
     );
 }
 
 export default Contact;
 
-{/* <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry" defer></script>
+{/* 
 
-<div id="map"></div> */}
+*/}
 
 // import React, { useEffect, useState } from 'react';
 // import "bootstrap/dist/css/bootstrap.min.css";
