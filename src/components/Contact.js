@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
+import googleMapReact from 'google-map-react';
 
 const Contact = () => {
 
@@ -69,6 +70,7 @@ const Contact = () => {
         <img src = {require('../assets/map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
         <div id="map" style={{margin: "30px" ,padding: "30px", animation:"fadeIn 3s ease"}}></div> 
+        <googleMapReact/>
       </div>
     );
 }
