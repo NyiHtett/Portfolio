@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import googleMapReact from 'google-map-react';
+import "../App.css";
 
 const Contact = () => {
 
@@ -60,9 +61,11 @@ const Contact = () => {
         <div className = {`${display ? 'fade-in' : ''} content`}> 
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXeJpfEQIB3nn4tfIf--WXQfZZ8jCX5w&libraries=geometry" defer></script>
         <div className = "contactWrapper">
-        <div>
+
+        {/* I added a class for shufflin but it's not working still
+        <div class = "shuffling-numbers">
           <img src = {require('../assets/phone.png')} width = "50px" style = {{margin: '20px'}}/>
-          (510) - 3589824</div>
+          (510) - 3589824</div> */}
         <div>
         <img src = {require('../assets/email.png')} width = "50px" style = {{margin: '20px'}}/>
           <a href = "mailto:nyihtet4dev@icloud.com"> nyihtet4dev@icloud.com </a></div>
@@ -70,8 +73,8 @@ const Contact = () => {
         <img src = {require('../assets/map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
         <div id="map" style={{margin: "30px" ,padding: "30px", animation:"fadeIn 3s ease"}}></div> 
-        <googleMapReact/>
       </div>
+      
     );
 }
 
