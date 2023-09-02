@@ -339,5 +339,5 @@ label {
 .shuffling-numbers{
   display: inline-block;
   font-size: 24px;
-  animation: shuffle 2s infinite;
+  animation: shuffle 2s ease-in;
 }

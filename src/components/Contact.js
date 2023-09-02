@@ -6,9 +6,13 @@ import "../App.css";
 
 const Contact = () => {
 
+    const [phNumber, setPhNumber] = useState(0);
     const [display, setDisplay] = useState(true);
     const [clientLocation, setClientLocation] = useState(null);
 
+    useEffect(()=>{
+      setPhNumber(5103589824);
+    },[])
     //this is the lat and lng of (39042 donnerway fremont)
     const [address, setAddress] = useState({ lat: 37.5369171, lng: -121.9967956});
 
@@ -62,13 +66,14 @@ const Contact = () => {
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXeJpfEQIB3nn4tfIf--WXQfZZ8jCX5w&libraries=geometry" defer></script>
         <div className = "contactWrapper">
 
-        {/* I added a class for shufflin but it's not working still
-        <div class = "shuffling-numbers">
+        <div> 
           <img src = {require('../assets/phone.png')} width = "50px" style = {{margin: '20px'}}/>
-          (510) - 3589824</div> */}
+          {phNumber}
+        </div>
         <div>
         <img src = {require('../assets/email.png')} width = "50px" style = {{margin: '20px'}}/>
-          <a href = "mailto:nyihtet4dev@icloud.com"> nyihtet4dev@icloud.com </a></div>
+          <a href = "mailto:nyihtet4dev@icloud.com"> nyihtet4dev@icloud.com </a>
+        </div>
         <div onClick={distancePrompt} >
         <img src = {require('../assets/map.png')} width = "50px" style = {{margin: '20px'}}/>39042 donnerway fremont CA</div>
         </div>
