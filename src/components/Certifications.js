@@ -143,8 +143,25 @@ function Certifications() {
               <a role="button" target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/7MDRMLXDF8QN" 
                style={{marginTop:'60px'}} class="btn btn-primary">Show Credential</a>
             </div>
+    </li>
+  </div>
+  <br/><br/><br/>
+
+  <div class="row" style={{justifyContent:'space-between'}}>
+  
+  <li class = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
+    <div class = "row" style={{margin: "20px", fontFamily:"fantasy", color:"white"}}>
+            <img class = "col-3 col-sm-3" style={{margin: "20px"}} src = { require('../assets/meta.png')}/>
+            <h3 class = "col-sm-7 text-justify" style={{display:'flex', alignItems:'center', margin: "20px"}}> Coding interview preparation </h3>
+            </div>
+
+            <div style={{fontSize:"20px", padding:"30px", marginBottom:'50px', color:'white'}} class="font-weight-bold">
+              <a role="button" target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/VGWCU6HYLSXG" 
+               style={{marginTop:'60px'}} class="btn btn-primary">Show Credential</a>
+            </div>
           </li> 
-   
+
+  
   </div>
 
   
