@@ -35,6 +35,12 @@ function App() {
   function toggleTheme() {
     setTheme(prevTheme => ( prevTheme === 'light' ? 'dark' : 'light'));
   }
+
+  function handleFormSubmit(e){
+    e.preventDefault();
+    console.log("hello");
+  }
+
   function Home(){
     return (
       <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
@@ -45,6 +51,12 @@ function App() {
        <p class = "first-paragraph" style = {{marginTop: "50px"}}>
         "Aspiring web developer"
        </p>
+
+       <form action="GET" onSubmit={handleFormSubmit} style = {{display:'flex', flexDirection:"column", alignItems:"center", gap:20}}>
+        <p> Leave a comment !</p>
+        <textarea style={{padding: "20px"}}></textarea>
+        <button type = "submit"> Comment </button>
+       </form>
       
       </div>
     );
