@@ -9,11 +9,12 @@ import Projects from './components/Projects.js';
 import Contact from './components/Contact';
 import './App.css';
 function App() {
+  const [text, setText] = useState('');
   const [theme, setTheme] = useState('light');
   const [isNavAnimated, setIsNavAnimated] = useState(false);
   const [isChangeImage,setChangeImage] = useState(false);
   const [git, setGit] = useState(true);
-  const [text, setText] = useState('');
+  
   function handleNavigation() {
     setIsNavAnimated(true); 
     setTimeout(() => {
@@ -37,7 +38,7 @@ function App() {
     setTheme(prevTheme => ( prevTheme === 'light' ? 'dark' : 'light'));
   }
 
-  function handleFormSubmit(e){
+  const handleFormSubmit = (e) => {
     e.preventDefault();
     console.log(text);
   }
@@ -53,11 +54,18 @@ function App() {
         "Aspiring web developer"
        </p>
 
-       <form onSubmit={handleFormSubmit} style={{ display: 'flex', flexDirection: "column", alignItems: "center", gap: 20 }}>
-  <p> Leave a comment !</p>
-  <textarea style={{ padding: "20px" }} type ="text" value={text} onChange={(e) => setText(e.target.value)}></textarea>
-  <button type="submit"> Comment </button>
-</form>
+       <form 
+       onSubmit={handleFormSubmit} 
+       style={{ display: 'flex', flexDirection: "column", alignItems: "center", gap: 20 }}>
+       <p> Leave a comment !</p>
+       <textarea 
+       style={{ padding: "20px" }} 
+       type = "text"
+       value={text} 
+       onChange={(e) => setText(e.target.value)}>
+       </textarea>
+       <button type="submit"> Comment </button>
+       </form>
 
       
       </div>
