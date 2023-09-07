@@ -74,9 +74,10 @@ const Contact = () => {
         <div className = {`${display ? 'fade-in' : ''} content`}> 
         {isloading ? (
           <div className='spinner'>
-
+          Loading
           </div>
         ): (<></>)}
+        
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXeJpfEQIB3nn4tfIf--WXQfZZ8jCX5w&libraries=geometry" defer></script>
         <div className = "contactWrapper">
 
