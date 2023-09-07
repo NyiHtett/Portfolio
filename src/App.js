@@ -9,7 +9,6 @@ import Projects from './components/Projects.js';
 import Contact from './components/Contact';
 import './App.css';
 function App() {
-  const [text, setText] = useState('');
   const [theme, setTheme] = useState('light');
   const [isNavAnimated, setIsNavAnimated] = useState(false);
   const [isChangeImage,setChangeImage] = useState(false);
@@ -38,10 +37,6 @@ function App() {
     setTheme(prevTheme => ( prevTheme === 'light' ? 'dark' : 'light'));
   }
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    console.log(text);
-  }
 
   function Home(){
     return (
@@ -53,20 +48,6 @@ function App() {
        <p class = "first-paragraph" style = {{marginTop: "50px"}}>
         "Aspiring web developer"
        </p>
-
-       <form 
-       onSubmit={handleFormSubmit} 
-       style={{ display: 'flex', flexDirection: "column", alignItems: "center", gap: 20 }}>
-       <p> Leave a comment !</p>
-       <textarea 
-       style={{ padding: "20px" }} 
-       type = "text"
-       value={text} 
-       onChange={(e) => setText(e.target.value)}>
-       </textarea>
-       <button type="submit"> Comment </button>
-       </form>
-
       
       </div>
     );
