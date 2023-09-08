@@ -60,6 +60,8 @@ function App() {
       <div className={`App Full-page ${theme}`}>
         <div className="uppperbody">
         <Router>
+          <style>
+          </style>
         <nav>
           <div className = "container">
           <ul className = "horizontal-list row">

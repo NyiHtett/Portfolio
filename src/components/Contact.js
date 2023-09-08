@@ -15,8 +15,11 @@ const Contact = () => {
       setPhNumber(5103589824);
     },[])
 
+
+
     //this is the lat and lng of (39042 donnerway fremont)
     const [address, setAddress] = useState({ lat: 37.5369171, lng: -121.9967956});
+
 
     const toRadians = (degrees) => {
           return degrees * (Math.PI/180);
@@ -42,6 +45,10 @@ const Contact = () => {
 
     }
 
+    
+
+
+
     const distancePrompt = () => {
       //get the client's location
       setLoading(true);
@@ -66,7 +73,6 @@ const Contact = () => {
         mapElement.style.backgroundColor = "blue";
         mapElement.textContent = "you are " + calculateDistance(clientLocation, address) +"km away from Nyi";
       }
-      
     }
 
     return(
@@ -74,7 +80,7 @@ const Contact = () => {
         <div className = {`${display ? 'fade-in' : ''} content`}> 
         {isloading ? (
           <div className='spinner'>
-          Loading
+          Fetching ...
           </div>
         ): (<></>)}
         
