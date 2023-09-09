@@ -2,9 +2,13 @@ import { useEffect, useState } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap";
 import googleMapReact from 'google-map-react';
+import ClipLoader from "react-spinners/ClipLoader";
 import "../App.css";
 
+
+
 const Contact = () => {
+  
 
     const [phNumber, setPhNumber] = useState(0);
     const [display, setDisplay] = useState(true);
@@ -79,9 +83,13 @@ const Contact = () => {
         
         <div className = {`${display ? 'fade-in' : ''} content`}> 
         {isloading ? (
-          <div className='spinner'>
-          Fetching ...
-          </div>
+          <ClipLoader
+          color={"orange"}
+          loading={isloading}
+          size={150}
+          aria-label="Loading Spinner"
+          data-testid="loader"
+        />
         ): (<></>)}
         
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeXeJpfEQIB3nn4tfIf--WXQfZZ8jCX5w&libraries=geometry" defer></script>
