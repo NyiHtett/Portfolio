@@ -22,17 +22,15 @@ const Contact = () => {
 
   const calculateDistance = (coord1, coord2) => {
     const earthRadius = 6371;
-    const lat1 = toRadians(coord1.lat);
-    const lng1 = toRadians(coord1.lng);
+    const lat1 = toRadians(coord1.latitude);
+    const lng1 = toRadians(coord1.longitude);
     const lat2 = toRadians(coord2.lat);
     const lng2 = toRadians(coord2.lng);
     const dlat = lat2 - lat1;
     const dlon = lng2 - lng1;
     const a = Math.sin(dlat / 2) ** 2 + Math.cos(lat1) * Math.cos(lat2) * Math.sin(dlon / 2) ** 2;
     const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
-    const answer =  earthRadius * c;
-    console.log("distance", answer);
-    return answer;
+    return earthRadius * c;
   }
 
   const distancePrompt = () => {
@@ -40,10 +38,20 @@ const Contact = () => {
 
     if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition((position) => {
-        const dist = calculateDistance(position.coords, address);
-        setDistance(dist);
-        setLoading(false);
-        setShowMap(true);
+
+        const calculateDistancePromise = new Promise(
+              (resolve) => {
+                const dist = calculateDistance(position.coords, address);
+                console.log(dist);
+                resolve(dist);
+              }
+        );
+        
+        calculateDistancePromise.then((dist) => {
+          setDistance(dist); 
+          setLoading(false);
+          setShowMap(true);
+        })
       });
     } else {
       alert("Geolocation is not available in your browser.");
@@ -79,7 +87,7 @@ const Contact = () => {
         </div>
       </div>
       {showMap && (
-        <div id="map" style={{ margin: "30px", padding: "30px", animation: "fadeIn 3s ease" }}>
+        <div id="map" style={{ margin: "30px", padding: "30px", animation: "fadeIn 3s ease", backgroundColor: "blue" }}>
           Map will be displayed here.
           {/* Display distance or any other map-related information */}
           {distance !== null && (
