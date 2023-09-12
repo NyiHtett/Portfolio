@@ -49,6 +49,11 @@ function App() {
         "Aspiring web developer"
        </p>
       
+       <div style = {{animation: "fadeIn 3s ease", padding:"30px", backgroundColor:"black"}}>
+        Hello visitor, my name is Nyi Htet, you can call me sam and I am a computer science student. 
+        <br/>
+        My hobbies are reading and coding. 
+       </div>
       </div>
     );
   }
@@ -103,8 +108,6 @@ function App() {
       
           <input type = "checkbox" id = "toggle"/>
           <label for = "toggle"></label>
-
-        
 
 
             </li>

@@ -22,6 +22,7 @@ const Contact = () => {
 
   const calculateDistance = (coord1, coord2) => {
     const earthRadius = 6371;
+    console.log(coord1); 
     const lat1 = toRadians(coord1.latitude);
     const lng1 = toRadians(coord1.longitude);
     const lat2 = toRadians(coord2.lat);
@@ -97,6 +98,9 @@ const Contact = () => {
           )}
         </div>
       )}
+      <div style={{ margin: "30px", padding: "30px", animation: "fadeIn 3s ease", backgroundColor: "blue" }}>
+         Click on the items to see some functions
+      </div>
     </div>
   );
 }
