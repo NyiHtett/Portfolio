@@ -87,17 +87,15 @@ const Contact = () => {
           <img src={require('../assets/map.png')} width="50px" style={{ margin: '20px' }} />39042 donnerway fremont CA
         </div>
       </div>
-      {showMap && (
+
+      
+        {/* code for displaying the prompt below */}
         <div id="map" style={{ margin: "30px", padding: "30px", animation: "fadeIn 3s ease", backgroundColor: "blue" }}>
-          Map will be displayed here.
-          {/* Display distance or any other map-related information */}
-          {distance !== null && (
-            <div>
+        {showMap ? (<div>
               Distance: {distance} km
-            </div>
-          )}
+        </div>): ("Click on the items to see the functions")}
         </div>
-      )}
+    
       <div style={{ margin: "30px", padding: "30px", animation: "fadeIn 3s ease", backgroundColor: "blue" }}>
          Click on the items to see some functions
       </div>
