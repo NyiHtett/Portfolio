@@ -75,17 +75,17 @@ const Contact = () => {
 
       <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=geometry" defer></script>
       <div className="contactWrapper">
-        <div>
+        <button className='btn btn-primary'>
           <img src={require('../assets/phone.png')} width="50px" style={{ margin: '20px' }} />
-          <a href={`tel:${phNumber}`}> {phNumber} </a>
-        </div>
-        <div>
+          <a href={`tel:${phNumber}`} style = {{fontSize: "20px", textDecoration:"none", color:"white"}}> {phNumber} </a>
+        </button>
+        <button className='btn btn-primary'>
           <img src={require('../assets/email.png')} width="50px" style={{ margin: '20px' }} />
-          <a href="mailto:nyihtet4dev@icloud.com">nyihtet4dev@icloud.com</a>
-        </div>
-        <div onClick={distancePrompt}>
-          <img src={require('../assets/map.png')} width="50px" style={{ margin: '20px' }} />39042 donnerway fremont CA
-        </div>
+          <a href="mailto:nyihtet4dev@icloud.com" style = {{ fontSize: "20px", textDecoration:"none", color:"white"}}>nyihtet4dev@icloud.com</a>
+        </button>
+        <button className='btn btn-primary' onClick={distancePrompt}>
+          <img src={require('../assets/map.png')} width="50px" style={{ margin: '20px', fontSize: "25px"}} />39042 donnerway fremont CA
+        </button>
       </div>
 
       
