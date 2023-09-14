@@ -77,7 +77,7 @@ const Contact = () => {
       <div className="contactWrapper">
         <div>
           <img src={require('../assets/phone.png')} width="50px" style={{ margin: '20px' }} />
-          {phNumber}
+          <a href={`tel:${phNumber}`}> {phNumber} </a>
         </div>
         <div>
           <img src={require('../assets/email.png')} width="50px" style={{ margin: '20px' }} />
@@ -96,9 +96,6 @@ const Contact = () => {
         </div>): ("Click on the items to see the functions")}
         </div>
     
-      <div style={{ margin: "30px", padding: "30px", animation: "fadeIn 3s ease", backgroundColor: "blue" }}>
-         Click on the items to see some functions
-      </div>
     </div>
   );
 }
