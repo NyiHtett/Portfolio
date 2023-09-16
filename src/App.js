@@ -49,7 +49,7 @@ function App() {
         "Aspiring web developer"
        </p>
       
-       <div style = {{animation: "fadeIn 3s ease", padding:"30px", backgroundColor:"black"}}>
+       <div style = {{animation: "fadeIn 3s ease", padding:"30px", backgroundColor:"orange", textShadow:"1px 1px 2px black", marginTop:"100px"}}>
         Hello visitor, my name is Nyi Htet, you can call me sam and I am a computer science student. 
         <br/>
         My hobbies are reading and coding. 

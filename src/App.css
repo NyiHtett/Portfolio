@@ -55,7 +55,6 @@
 
 
 .App {
-
   font-family: 'Courier New', Courier, monospace;
 }
 
@@ -90,6 +89,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   text-shadow: 0 0 10x rgba(0,0,0,0.2);
 }
+
+.nav-link:hover{
+  color: orange;
+}
+
 .profile-image{
   box-shadow: 0 0 10px 10px rgba(0,0,0,0.2);
   margin-bottom: 20px;
