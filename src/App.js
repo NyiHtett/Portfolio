@@ -97,12 +97,7 @@ function App() {
               }
             }}
             >
-            {/* <button 
-            
-            className = "image-button">
-        
-         <img src={require(`${isChangeImage ? './assets/moon' : './assets/light'}.png`)} width="50"/>
-       </button> */}
+
        
 
       
