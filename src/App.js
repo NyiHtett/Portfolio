@@ -103,8 +103,6 @@ function App() {
       
           <input type = "checkbox" id = "toggle"/>
           <label for = "toggle"></label>
-
-
             </li>
           </ul>
           </div>
