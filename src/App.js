@@ -50,9 +50,7 @@ function App() {
        </p>
       
        <div style = {{animation: "fadeIn 3s ease", padding:"30px", backgroundColor:"orange", marginTop:"100px", color:"black"}}>
-        Hello visitor, my name is Nyi Htet, you can call me sam and I am a computer science student. 
-        <br/>
-        My hobbies are reading and coding. 
+        Damn son, you made it !
        </div>
       </div>
     );
