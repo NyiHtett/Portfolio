@@ -61,6 +61,29 @@ test('LinkedIn logo renders', ()=>{
   expect(LinkedInLogo).toHaveAttribute('width', '50');
 });
 
+test('GitHub logo renders', ()=>{
+  render(<App/>)
+  const GitHubLogo = screen.getByAltText("GitHub Logo");
+  expect(GitHubLogo).toBeInTheDocument(); 
+  expect(GitHubLogo).toHaveAttribute('src', 'Git.png');
+  expect(GitHubLogo).toHaveAttribute('width', '50');
+});
+
+test('twitter logo renders', () => {
+  render(<App/>)
+  const TwitterLogo = screen.getByAltText("Twitter logo");
+  expect(TwitterLogo).toBeInTheDocument(); 
+  expect(TwitterLogo).toHaveAttribute('src', 'twitter.png');
+  expect(TwitterLogo).toHaveAttribute('width', '50');
+});
+
+test('Youtube logo renders', () => {
+  render(<App/>)
+  const YoutubeLogo = screen.getByAltText("Youtube logo");
+  expect(YoutubeLogo).toBeInTheDocument(); 
+  expect(YoutubeLogo).toHaveAttribute('src', 'youtube.png');
+  expect(YoutubeLogo).toHaveAttribute('width', '50')
+})
 
 
 

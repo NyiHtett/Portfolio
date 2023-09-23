@@ -137,17 +137,17 @@ function App() {
         </li>
         <li>
         <a href = "https://github.com/NyiHtett" target = "_blank"> 
-       <img src = {require(`./assets/${git ? 'Git' : 'gitt'}.png`)} width = "50"/>
+       <img src = {require(`./assets/${git ? 'Git' : 'gitt'}.png`)} width = "50" alt = "GitHub Logo"/>
        </a>
         </li>
         <li>
         <a href = "https://twitter.com/NyiHtet20765409" target = "_blank"> 
-       <img src = {require('./assets/twitter.png')} width = "50" alt = "Github profile"/>
+       <img src = {require('./assets/twitter.png')} width = "50" alt = "Twitter logo"/>
        </a>
         </li>
         <li>
           <a href="https://www.youtube.com/channel/UCQnPj__dVP9FATFTO42-NNw"> 
-          <img src = {require('./assets/youtube (1).png')} width = "50" />
+          <img src = {require('./assets/youtube.png')} width = "50" alt = "Youtube logo"/>
           </a>
         </li>
        </ul>
