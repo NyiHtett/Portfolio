@@ -85,6 +85,12 @@ test('Youtube logo renders', () => {
   expect(YoutubeLogo).toHaveAttribute('width', '50')
 })
 
+test('entry image is included', () =>{
+  render(<App/>)
+  const entryImage = screen.getByAltText("Profile image");
+  expect(entryImage).toBeInTheDocument();
+  expect(entryImage).toHaveAttribute('width', '200');
+});
 
 
 

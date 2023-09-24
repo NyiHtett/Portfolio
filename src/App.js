@@ -41,8 +41,8 @@ function App() {
   function Home(){
     return (
       <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
-        <div className = "image-container">
-       <img src={require('./assets/port.jpg')} className = "profile-image" width = "200" />
+       <div className = "image-container">
+       <img src={require('./assets/port.jpg')} className = "profile-image" width = "200" alt = "Profile image"/>
        </div>
 
        <p class = "first-paragraph" style = {{marginTop: "50px"}}>
