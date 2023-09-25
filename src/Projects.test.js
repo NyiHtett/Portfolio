@@ -14,6 +14,12 @@ test("all project texts render successfully", ()=>{
     expect(screen.getByText("AgeVerifyPro")).toBeInTheDocument();
 });
 
+test("correctly navigate to Mapify website", ()=>{
+    const button = screen.getByTitle('Go to the website', { selector: 'a[href="https://my-mapify.vercel.app/"]'});
+    fireEvent.click(button); 
+    expect(window.location.href).toBe("https://my-mapify.vercel.app/");
+})
+
 // should open a project description when a project is clicked
 // should navigate to the project website when "Go to the website" is clicked
 // Assert that the window location has changed to the project's website URL
