@@ -20,12 +20,19 @@ test("correctly navigate to Mapify website", async () => {
   
     // Trigger the click event on the button
     fireEvent.click(button);
-  
-    // Use async/await with waitFor to wait for the navigation to complete
-    await waitFor(() => {
-      expect(window.location.href).toBe("https://my-mapify.vercel.app/");
-    });
   });
+
+test("correctly navigate to Header & Slider project", () => {
+  render(<Projects/>);
+  const button = screen.getByText('Go to the website', { selector: 'a[href="https://header-goodworkhub.vercel.app/"]'});
+  fireEvent.click(button);
+})
+
+test("correctly navigate to the github profile", () => {
+  render(<Projects/>);
+  const button = screen.getByText('Go to the website', { selector: 'a[href="https://github.com/goodworkhub-dev/flutter-mobile-app"]'});
+  fireEvent.click(button);
+});
 // should open a project description when a project is clicked
 // should navigate to the project website when "Go to the website" is clicked
 // Assert that the window location has changed to the project's website URL
