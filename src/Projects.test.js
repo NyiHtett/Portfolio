@@ -15,12 +15,13 @@ test("all project texts render successfully", ()=>{
 });
 
 test("correctly navigate to Mapify website", async () => {
+    const originalOpen = window.open;
+    window.open = jest.fn(); 
     render(<Projects />);
     const button = screen.getByText('Go to the website', { selector: 'a[href="https://my-mapify.vercel.app/"]' });
-  
-    // Trigger the click event on the button
     fireEvent.click(button);
-  });
+    await waitFor(()=> expect(window.open).toHaveBeenCalledWith('https://header-goodworkhub.vercel.app/', '_blank'));
+    });
 
 test("correctly navigate to Header & Slider project", () => {
   render(<Projects/>);
