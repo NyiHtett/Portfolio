@@ -31,11 +31,13 @@ describe('Contact component', () => {
     //   });
     
 
-    it('renders the address finder button', () =>{
+    it('renders the address finder button and the distance prompt', () =>{
         render(<Contact/>);
         const mapButton = screen.getByText("39042 donnerway fremont CA");
         expect(mapButton).toBeInTheDocument(); 
-        fireEvent.click(mapButton); 
+        fireEvent.click(mapButton);
+        const prompt = screen.getByText("Distance: ");
+        expect(prompt).toBeInTheDocument(); 
     })
 
     it('ending prompt is displayed', () => {
@@ -44,10 +46,7 @@ describe('Contact component', () => {
         expect(text).toBeInTheDocument();
     })
 
-    it('distance is prompted', ()=> {
-        render(<Contact isLoading = {false}/>);
-        const distance = 3;
-    })
+
 
     
 })
