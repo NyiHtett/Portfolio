@@ -1,5 +1,5 @@
 import React from "react";
-import { screen, render, fireEvent } from "@testing-library/react";
+import { screen, render, fireEvent, waitFor } from "@testing-library/react";
 import '@testing-library/jest-dom/extend-expect';
 import Contact from "./components/Contact";
 
@@ -31,13 +31,17 @@ describe('Contact component', () => {
     //   });
     
 
-    it('renders the address finder button and the distance prompt', () =>{
+    it('renders the address finder button and the distance prompt', async () =>{
         render(<Contact/>);
         const mapButton = screen.getByText("39042 donnerway fremont CA");
         expect(mapButton).toBeInTheDocument(); 
         fireEvent.click(mapButton);
-        const prompt = screen.getByText("Distance: ");
-        expect(prompt).toBeInTheDocument(); 
+        await waitFor(()=> {
+            const distance = screen.getByText(/Distance: /i);
+            expect(distance).toBeInTheDocument();
+        }); 
+        // const prompt = screen.getByText("Distance: ");
+        // expect(prompt).toBeInTheDocument(); 
     })
 
     it('ending prompt is displayed', () => {

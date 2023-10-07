@@ -4,6 +4,7 @@ import "bootstrap/dist/js/bootstrap";
 import googleMapReact from 'google-map-react';
 import ClipLoader from "react-spinners/ClipLoader";
 import "../App.css";
+import { render, waitFor } from '@testing-library/react';
 
 const Contact = () => {
   const [phNumber, setPhNumber] = useState(0);
