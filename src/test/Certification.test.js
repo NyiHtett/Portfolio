@@ -8,5 +8,13 @@ describe("Certification component", ()=> {
         render(<Certifications/>);
         const title1 = screen.getByText("Technical Support Fundamentals");
         expect(title1).toBeInTheDocument();
+
+        const googleLogo = screen.getByAltText("Google Logo");
+        expect(googleLogo).toBeInTheDocument(); 
+
+        const button = screen.getByText("Show Credential");
+        expect(button).toBeInTheDocument();
     })
+
+
 })

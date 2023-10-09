@@ -10,10 +10,9 @@ function Certifications() {
 
         <div className="container">
   <div className="row" style={{justifyContent:'space-between'}}>
-  
   <div className = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'white'}}>
     <div className = "row p-4" style={{margin: "20px", fontFamily:"fantasy"}}>
-    <img className = "col-3 col-sm-3" src = { require('../assets/google.png')} />
+    <img className = "col-3 col-sm-3" src = {require('../assets/google.png')} alt = "Google Logo"/>
     <h3 className = "col-sm-9" style={{display:'flex', alignItems:'center'}}> Technical Support Fundamentals  </h3>
     </div>
             <div style={{fontSize:"20px", marginBottom:'50px'}}>
@@ -27,7 +26,6 @@ function Certifications() {
               <a role="button" target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/HRFTJUXSQ7RZ" 
               style={{marginTop:'40px'}} className="btn btn-outline-secondary">Show Credential</a>
             </div>
-            
    </div>
    <li className = "col-11 col-sm-5 card" style={{borderRadius: '30px',background:'#3b5998'}}>
     <div className = "row" style={{margin: "20px", fontFamily:"fantasy", color:"white"}}>
