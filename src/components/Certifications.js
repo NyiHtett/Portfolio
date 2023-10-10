@@ -24,6 +24,7 @@ function Certifications() {
               <li> Technical support  </li>
               <li> Customer service </li>
               <a role="button" target="_blank" href="https://www.coursera.org/account/accomplishments/certificate/HRFTJUXSQ7RZ" 
+              data-testid = "show-credential-button-1"
               style={{marginTop:'40px'}} className="btn btn-outline-secondary">Show Credential</a>
             </div>
    </div>
