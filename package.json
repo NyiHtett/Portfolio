@@ -14,6 +14,7 @@
     "express": "^4.18.2",
     "google-map-react": "^2.2.1",
     "jest": "^27.5.1",
+    "openai": "^4.95.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-player": "^2.12.0",

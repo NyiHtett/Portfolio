@@ -7,12 +7,14 @@ import React, { useEffect, useState } from 'react';
 import Music from './components/Music.js';
 import Projects from './components/Projects.js';
 import Contact from './components/Contact';
+import OpenAI from 'openai';
 import './App.css';
 function App() {
   const [theme, setTheme] = useState('light');
   const [isNavAnimated, setIsNavAnimated] = useState(false);
   const [isChangeImage,setChangeImage] = useState(false);
   const [git, setGit] = useState(true);
+  const openai = new OpenAI(); 
   
   function handleNavigation() {
     setIsNavAnimated(true); 
@@ -41,17 +43,34 @@ function App() {
   function Home(){
     return (
       <div className = {`${isNavAnimated ? 'fade-in' : ''}`}>
-       <div className = "image-container">
-       <img src={require('./assets/port.jpg')} className = "profile-image" width = "200" alt = "Profile image"/>
-       </div>
+       {/* <div className = "image-container">
+       //<img src={require('./assets/port.jpg')} className = "profile-image" width = "200" alt = "Profile image"/>
+       </div> */}
 
-       <p class = "first-paragraph" style = {{marginTop: "50px"}}>
+       {/* <p class = "first-paragraph" style = {{marginTop: "50px"}}>
         "Aspiring web developer"
-       </p>
-      
-       <div style = {{animation: "fadeIn 3s ease", padding:"30px", backgroundColor:"orange", marginTop:"100px", color:"black"}}>
-        Damn son, you made it !
-       </div>
+       </p> */}
+
+       <h1> Learning Basic AI using tools </h1>
+       <h2 src="https://experiments.withgoogle.com/teachable-machine"> Teachable Machine </h2>
+       <h2 src="https://quickdraw.withgoogle.com/"> Quick Draw </h2>
+
+       <h1> Create your AI buddy that knows about you ! </h1>
+       <h1> The more you chat with your buddy, the more it get smarter ! </h1>
+
+       <h1> Part 0, create starting flag, and add forever loop</h1>
+       <h1> Part 1, make AI to get your question</h1>
+       <img src='./assetsForScratch/Part 1.png'/>
+       <img src='./assetsForScratch/Part 1 code.png'/>
+
+
+       <h1> Part 2, search your question in the prompt bank</h1>
+       <img src='./assetsForScratch/Part 2.png'/>
+       <img src='./assetsForScratch/Part 2 code.png'/>
+
+       <h1> Part 3, if not found, add your question</h1>
+       <img src='./assetsForScratch/Part 3.png'/>
+       <img src='./assetsForScratch/Part 3 code.png'/>
       </div>
     );
   }
